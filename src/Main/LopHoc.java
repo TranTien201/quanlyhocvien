@@ -83,6 +83,14 @@ public class LopHoc extends javax.swing.JFrame {
         jPanel_Menu.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 80));
 
         ipnBieudo.setBackground(new java.awt.Color(38, 40, 55));
+        ipnBieudo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ipnBieudoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ipnBieudoMouseEntered(evt);
+            }
+        });
         ipnBieudo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setBackground(new java.awt.Color(0, 153, 0));
@@ -99,6 +107,11 @@ public class LopHoc extends javax.swing.JFrame {
 
         jpnTrangchu.setBackground(new java.awt.Color(38, 40, 55));
         jpnTrangchu.setForeground(new java.awt.Color(255, 255, 255));
+        jpnTrangchu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnTrangchuMouseClicked(evt);
+            }
+        });
         jpnTrangchu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setBackground(new java.awt.Color(0, 153, 0));
@@ -161,6 +174,11 @@ public class LopHoc extends javax.swing.JFrame {
         jPanel_Menu.add(jpnLophoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 330, 80));
 
         jpnKhoahoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnKhoahoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnKhoahocMouseClicked(evt);
+            }
+        });
         jpnKhoahoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setBackground(new java.awt.Color(0, 153, 0));
@@ -209,9 +227,9 @@ public class LopHoc extends javax.swing.JFrame {
 
         jpnView.setBackground(new java.awt.Color(153, 153, 153));
         jpnView.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jpnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 760, 670));
+        jPanel1.add(jpnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 770, 670));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 670));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -230,12 +248,48 @@ public class LopHoc extends javax.swing.JFrame {
     }//GEN-LAST:event_jlbHocvienMouseClicked
 
     private void jpnHocvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnHocvienMouseClicked
-
+        HocVien o = new HocVien();
+        o.setVisible(true);
+        o.pack();
+        o.setLocationRelativeTo(null);
+        o.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
     }//GEN-LAST:event_jpnHocvienMouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void jpnTrangchuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnTrangchuMouseClicked
+        MainFr mn = new MainFr();
+        mn.setVisible(true);
+        mn.pack();
+        mn.setLocationRelativeTo(null);
+        mn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnTrangchuMouseClicked
+
+    private void jpnKhoahocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnKhoahocMouseClicked
+        KhoaHoc kh = new KhoaHoc();
+        kh.setVisible(true);
+        kh.pack();
+        kh.setLocationRelativeTo(null);
+        kh.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnKhoahocMouseClicked
+
+    private void ipnBieudoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ipnBieudoMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ipnBieudoMouseEntered
+
+    private void ipnBieudoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ipnBieudoMouseClicked
+        ThongKe tk = new ThongKe();
+        tk.setVisible(true);
+        tk.pack();
+        tk.setLocationRelativeTo(null);
+        tk.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_ipnBieudoMouseClicked
 
     /**
      * @param args the command line arguments

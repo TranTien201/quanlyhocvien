@@ -65,16 +65,16 @@ public class studentmotify {
     }
     public static void update(student std) {
         Connection con = myConnection.getConnection();
-        String sql = "UPDATE `student` SET `id_student` =?, `name`=?,`phone`=?,`address`=?,`birthday`=?,`gender`=? WHERE id_student = ?";
+        String sql = "UPDATE `student` SET `name`=?,`phone`=?,`address`=?,`birthday`=?,`gender`=? WHERE id_student = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
            
            
             ps.setString(1, std.getName());
-            ps.setString(2, std.getAddress());
-            ps.setString(3, std.getPhone());
-            ps.setString(4, std.getGender());
-            ps.setString(5, std.getBirthday());
+            ps.setString(2, std.getPhone());
+            ps.setString(3, std.getAddress());
+            ps.setString(4, std.getBirthday());
+            ps.setString(5, std.getGender());
             ps.setString(6, std.getId_student());
             ps.executeUpdate();
         } catch (SQLException ex) {

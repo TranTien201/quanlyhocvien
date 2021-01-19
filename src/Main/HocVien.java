@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.student;
@@ -129,6 +130,11 @@ public class HocVien extends javax.swing.JFrame {
         jPanel_Menu.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 80));
 
         ipnBieudo.setBackground(new java.awt.Color(38, 40, 55));
+        ipnBieudo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ipnBieudoMouseClicked(evt);
+            }
+        });
         ipnBieudo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setBackground(new java.awt.Color(0, 153, 0));
@@ -145,6 +151,11 @@ public class HocVien extends javax.swing.JFrame {
 
         jpnTrangchu.setBackground(new java.awt.Color(38, 40, 55));
         jpnTrangchu.setForeground(new java.awt.Color(255, 255, 255));
+        jpnTrangchu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnTrangchuMouseClicked(evt);
+            }
+        });
         jpnTrangchu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setBackground(new java.awt.Color(0, 153, 0));
@@ -181,6 +192,11 @@ public class HocVien extends javax.swing.JFrame {
         jPanel_Menu.add(jpnHocvien, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 330, 80));
 
         jpnLophoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnLophoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnLophocMouseClicked(evt);
+            }
+        });
         jpnLophoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setBackground(new java.awt.Color(0, 153, 0));
@@ -197,6 +213,14 @@ public class HocVien extends javax.swing.JFrame {
         jPanel_Menu.add(jpnLophoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 330, 80));
 
         jpnKhoahoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnKhoahoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnKhoahocMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jpnKhoahocMouseEntered(evt);
+            }
+        });
         jpnKhoahoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setBackground(new java.awt.Color(0, 153, 0));
@@ -456,9 +480,19 @@ public class HocVien extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_diachiActionPerformed
 
     private void jlb_updateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlb_updateMouseClicked
-       //for (student s : studentList) {
-        //   if(s.getId_student().equals(txt)) {
+       
+        for (student s : studentList) {
+           if(s.getId_student().equals(txt_idhs.getText())) {
+               s.setName(txt_ten1.getText());
+               s.setAddress(txt_diachi.getText());
+               s.setPhone(txt_phone.getText());
+               s.setGender(txt_gender1.getText());
+               s.setBirthday(jDateChooser_BD.getDateFormatString());
+               break;
+           }
           
+       }   
+      // studentmotify.delete( id_student);
     }//GEN-LAST:event_jlb_updateMouseClicked
 
     private void jlb_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlb_addMouseClicked
@@ -542,6 +576,46 @@ public class HocVien extends javax.swing.JFrame {
     private void txt_ten1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ten1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_ten1ActionPerformed
+
+    private void jpnTrangchuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnTrangchuMouseClicked
+        MainFr mn = new MainFr();
+        mn.setVisible(true);
+        mn.pack();
+        mn.setLocationRelativeTo(null);
+        mn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnTrangchuMouseClicked
+
+    private void jpnLophocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnLophocMouseClicked
+        LopHoc lp = new LopHoc();
+        lp.setVisible(true);
+        lp.pack();
+        lp.setLocationRelativeTo(null);
+        lp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnLophocMouseClicked
+
+    private void jpnKhoahocMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnKhoahocMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpnKhoahocMouseEntered
+
+    private void jpnKhoahocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnKhoahocMouseClicked
+        KhoaHoc kh = new KhoaHoc();
+        kh.setVisible(true);
+        kh.pack();
+        kh.setLocationRelativeTo(null);
+        kh.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnKhoahocMouseClicked
+
+    private void ipnBieudoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ipnBieudoMouseClicked
+        ThongKe tk = new ThongKe();
+        tk.setVisible(true);
+        tk.pack();
+        tk.setLocationRelativeTo(null);
+        tk.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_ipnBieudoMouseClicked
 
     /**
      * @param args the command line arguments

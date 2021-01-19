@@ -99,6 +99,11 @@ public class ThongKe extends javax.swing.JFrame {
 
         jpnTrangchu.setBackground(new java.awt.Color(38, 40, 55));
         jpnTrangchu.setForeground(new java.awt.Color(255, 255, 255));
+        jpnTrangchu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnTrangchuMouseClicked(evt);
+            }
+        });
         jpnTrangchu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setBackground(new java.awt.Color(0, 153, 0));
@@ -145,6 +150,11 @@ public class ThongKe extends javax.swing.JFrame {
         jPanel_Menu.add(jpnHocvien, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 330, 80));
 
         jpnLophoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnLophoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnLophocMouseClicked(evt);
+            }
+        });
         jpnLophoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbLophoc.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
@@ -161,6 +171,11 @@ public class ThongKe extends javax.swing.JFrame {
         jPanel_Menu.add(jpnLophoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 330, 80));
 
         jpnKhoahoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnKhoahoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jpnKhoahocMouseEntered(evt);
+            }
+        });
         jpnKhoahoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setBackground(new java.awt.Color(0, 153, 0));
@@ -171,6 +186,11 @@ public class ThongKe extends javax.swing.JFrame {
         jlbKhoahoc.setForeground(new java.awt.Color(255, 255, 255));
         jlbKhoahoc.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\classroom_50px.png")); // NOI18N
         jlbKhoahoc.setText(" Course management ");
+        jlbKhoahoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlbKhoahocMouseClicked(evt);
+            }
+        });
         jpnKhoahoc.add(jlbKhoahoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
 
         jPanel_Menu.add(jpnKhoahoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 330, 80));
@@ -230,12 +250,48 @@ public class ThongKe extends javax.swing.JFrame {
     }//GEN-LAST:event_jlbHocvienMouseClicked
 
     private void jpnHocvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnHocvienMouseClicked
-
+        HocVien o = new HocVien();
+        o.setVisible(true);
+        o.pack();
+        o.setLocationRelativeTo(null);
+        o.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
     }//GEN-LAST:event_jpnHocvienMouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void jpnTrangchuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnTrangchuMouseClicked
+        MainFr mn = new MainFr();
+        mn.setVisible(true);
+        mn.pack();
+        mn.setLocationRelativeTo(null);
+        mn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnTrangchuMouseClicked
+
+    private void jpnLophocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnLophocMouseClicked
+        LopHoc lp = new LopHoc();
+        lp.setVisible(true);
+        lp.pack();
+        lp.setLocationRelativeTo(null);
+        lp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnLophocMouseClicked
+
+    private void jpnKhoahocMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnKhoahocMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpnKhoahocMouseEntered
+
+    private void jlbKhoahocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbKhoahocMouseClicked
+        KhoaHoc kh = new KhoaHoc();
+        kh.setVisible(true);
+        kh.pack();
+        kh.setLocationRelativeTo(null);
+        kh.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jlbKhoahocMouseClicked
 
     /**
      * @param args the command line arguments

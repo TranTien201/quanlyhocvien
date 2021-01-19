@@ -5,6 +5,8 @@
  */
 package Main;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author TranTien
@@ -32,7 +34,7 @@ public class KhoaHoc extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        ipnBieudo = new javax.swing.JPanel();
+        jpnBieudo = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jlbBieudo = new javax.swing.JLabel();
         jpnTrangchu = new javax.swing.JPanel();
@@ -80,23 +82,33 @@ public class KhoaHoc extends javax.swing.JFrame {
 
         jPanel_Menu.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 80));
 
-        ipnBieudo.setBackground(new java.awt.Color(38, 40, 55));
-        ipnBieudo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jpnBieudo.setBackground(new java.awt.Color(38, 40, 55));
+        jpnBieudo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnBieudoMouseClicked(evt);
+            }
+        });
+        jpnBieudo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setBackground(new java.awt.Color(0, 153, 0));
         jLabel3.setOpaque(true);
-        ipnBieudo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+        jpnBieudo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
 
         jlbBieudo.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jlbBieudo.setForeground(new java.awt.Color(255, 255, 255));
         jlbBieudo.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\statistics_50px.png")); // NOI18N
         jlbBieudo.setText(" Statistics");
-        ipnBieudo.add(jlbBieudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
+        jpnBieudo.add(jlbBieudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
 
-        jPanel_Menu.add(ipnBieudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 330, 80));
+        jPanel_Menu.add(jpnBieudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 330, 80));
 
         jpnTrangchu.setBackground(new java.awt.Color(38, 40, 55));
         jpnTrangchu.setForeground(new java.awt.Color(255, 255, 255));
+        jpnTrangchu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnTrangchuMouseClicked(evt);
+            }
+        });
         jpnTrangchu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setBackground(new java.awt.Color(0, 153, 0));
@@ -118,6 +130,11 @@ public class KhoaHoc extends javax.swing.JFrame {
         jPanel_Menu.add(jpnTrangchu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 330, 80));
 
         jpnHocvien.setBackground(new java.awt.Color(38, 40, 55));
+        jpnHocvien.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnHocvienMouseClicked(evt);
+            }
+        });
         jpnHocvien.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbHocvien.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
@@ -133,6 +150,11 @@ public class KhoaHoc extends javax.swing.JFrame {
         jPanel_Menu.add(jpnHocvien, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 330, 80));
 
         jpnLophoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnLophoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnLophocMouseClicked(evt);
+            }
+        });
         jpnLophoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlbLophoc.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
@@ -212,6 +234,42 @@ public class KhoaHoc extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jLabel16MouseClicked
 
+    private void jpnTrangchuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnTrangchuMouseClicked
+        MainFr mn = new MainFr();
+        mn.setVisible(true);
+        mn.pack();
+        mn.setLocationRelativeTo(null);
+        mn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnTrangchuMouseClicked
+
+    private void jpnHocvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnHocvienMouseClicked
+        HocVien o = new HocVien();
+        o.setVisible(true);
+        o.pack();
+        o.setLocationRelativeTo(null);
+        o.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnHocvienMouseClicked
+
+    private void jpnLophocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnLophocMouseClicked
+        LopHoc lp = new LopHoc();
+        lp.setVisible(true);
+        lp.pack();
+        lp.setLocationRelativeTo(null);
+        lp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnLophocMouseClicked
+
+    private void jpnBieudoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnBieudoMouseClicked
+        ThongKe tk = new ThongKe();
+        tk.setVisible(true);
+        tk.pack();
+        tk.setLocationRelativeTo(null);
+        tk.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnBieudoMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -248,7 +306,6 @@ public class KhoaHoc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel ipnBieudo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
@@ -270,6 +327,7 @@ public class KhoaHoc extends javax.swing.JFrame {
     private javax.swing.JLabel jlbKhoahoc;
     private javax.swing.JLabel jlbLophoc;
     private javax.swing.JLabel jlbTrangchu;
+    private javax.swing.JPanel jpnBieudo;
     private javax.swing.JPanel jpnHocvien;
     private javax.swing.JPanel jpnKhoahoc;
     private javax.swing.JPanel jpnLophoc;
