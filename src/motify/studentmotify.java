@@ -25,12 +25,12 @@ import myConnection.myConnection;
 public class studentmotify {
     public static List<student> findAll() {
         List<student> studentList = new ArrayList<>();
-        // quàn lý dữ liệu đầu ra
+        // kết nối vs connection
         Connection con = myConnection.getConnection();
+        // truy vấn
         String sql = "SELECT * FROM `student`";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            // lay du lieu tra ve
              ResultSet rs = ps.executeQuery();
              while (rs.next()) {
                  student std = new student(rs.getInt("id_student"),

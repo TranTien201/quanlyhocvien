@@ -6,9 +6,13 @@
 package Main;
 
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.student;
@@ -21,6 +25,7 @@ import motify.studentmotify;
 public class HocVien extends javax.swing.JFrame {
     DefaultTableModel tableModel;
     List<student> studentList = new ArrayList<>();
+   
     
     /**
      * Creates new form HocVien
@@ -92,7 +97,7 @@ public class HocVien extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jlb_add = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        jlb_update = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         txt_gender1 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
@@ -260,6 +265,11 @@ public class HocVien extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblStudent.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblStudentMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblStudent);
 
         jpnView.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 760, 290));
@@ -353,16 +363,16 @@ public class HocVien extends javax.swing.JFrame {
         });
         jpnView.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 120, 40));
 
-        jLabel19.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel19.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\uninstalling_updates_32px.png")); // NOI18N
-        jLabel19.setText("Update");
-        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+        jlb_update.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jlb_update.setForeground(new java.awt.Color(255, 255, 255));
+        jlb_update.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\uninstalling_updates_32px.png")); // NOI18N
+        jlb_update.setText("Update");
+        jlb_update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel19MouseClicked(evt);
+                jlb_updateMouseClicked(evt);
             }
         });
-        jpnView.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 120, 40));
+        jpnView.add(jlb_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 120, 40));
 
         jLabel12.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -427,13 +437,11 @@ public class HocVien extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_diachiActionPerformed
 
-    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-       txt_ten.setText("");
-       txt_phone.setText("");
-       txt_diachi.setText("");
-       txt_gender1.setText("");
-       jDateChooser_BD.setDateFormatString("");
-    }//GEN-LAST:event_jLabel19MouseClicked
+    private void jlb_updateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlb_updateMouseClicked
+       //for (student s : studentList) {
+        //   if(s.getId_student().equals(txt)) {
+          
+    }//GEN-LAST:event_jlb_updateMouseClicked
 
     private void jlb_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlb_addMouseClicked
         String name = txt_ten.getText();
@@ -481,8 +489,35 @@ public class HocVien extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-        // TODO add your handling code here:
+       txt_ten.setText("");
+       txt_phone.setText("");
+       txt_diachi.setText("");
+       txt_gender1.setText("");
+       jDateChooser_BD.setDateFormatString("");
     }//GEN-LAST:event_jLabel20MouseClicked
+
+    private void tblStudentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblStudentMouseClicked
+        int selectedRow = tblStudent.getSelectedRow();
+        if (selectedRow >= 0) {
+            String name = (String) tblStudent.getValueAt(selectedRow, 1);
+            for (student s : studentList) {
+                if(name.equals(s.getName())) {
+                    txt_ten.setText(name);
+                    txt_diachi.setText(s.getAddress());
+                    txt_phone.setText(s.getPhone());
+                    txt_gender1.setText(s.getGender());
+                    try {
+                        Date date  = new SimpleDateFormat("yyyy-MM-dd").parse((String) tblStudent.getValueAt(selectedRow,4));
+                        jDateChooser_BD.setDate(date);
+                    } catch (ParseException ex) {
+                        Logger.getLogger(HocVien.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
+                    break;
+                }
+            }
+        }
+    }//GEN-LAST:event_tblStudentMouseClicked
 
     /**
      * @param args the command line arguments
@@ -530,7 +565,6 @@ public class HocVien extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
@@ -555,6 +589,7 @@ public class HocVien extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_bdate;
     private javax.swing.JLabel jlb_diachi;
     private javax.swing.JLabel jlb_ten;
+    private javax.swing.JLabel jlb_update;
     private javax.swing.JPanel jpnHocvien;
     private javax.swing.JPanel jpnKhoahoc;
     private javax.swing.JPanel jpnLophoc;
