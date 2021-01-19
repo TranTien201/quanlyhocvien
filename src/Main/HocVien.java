@@ -518,7 +518,7 @@ public class HocVien extends javax.swing.JFrame {
             }
         });
     }
-    /* tien */
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ipnBieudo;

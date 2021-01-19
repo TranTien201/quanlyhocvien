@@ -27,21 +27,213 @@ public class LopHoc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jPanel_Menu = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        ipnBieudo = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jlbBieudo = new javax.swing.JLabel();
+        jpnTrangchu = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jlbTrangchu = new javax.swing.JLabel();
+        jpnHocvien = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jlbHocvien = new javax.swing.JLabel();
+        jpnLophoc = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jlbLophoc = new javax.swing.JLabel();
+        jpnKhoahoc = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jlbKhoahoc = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jpnView = new javax.swing.JPanel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel_Menu.setBackground(new java.awt.Color(38, 40, 55));
+        jPanel_Menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(38, 40, 55));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\user_groups_50px.png")); // NOI18N
+        jLabel1.setText("Management trainees");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
+
+        jLabel2.setBackground(new java.awt.Color(255, 51, 51));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setOpaque(true);
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+
+        jPanel_Menu.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 80));
+
+        ipnBieudo.setBackground(new java.awt.Color(38, 40, 55));
+        ipnBieudo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel3.setOpaque(true);
+        ipnBieudo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+
+        jlbBieudo.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jlbBieudo.setForeground(new java.awt.Color(255, 255, 255));
+        jlbBieudo.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\statistics_50px.png")); // NOI18N
+        jlbBieudo.setText(" Statistics");
+        ipnBieudo.add(jlbBieudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
+
+        jPanel_Menu.add(ipnBieudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 330, 80));
+
+        jpnTrangchu.setBackground(new java.awt.Color(38, 40, 55));
+        jpnTrangchu.setForeground(new java.awt.Color(255, 255, 255));
+        jpnTrangchu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel5.setOpaque(true);
+        jpnTrangchu.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+
+        jlbTrangchu.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jlbTrangchu.setForeground(new java.awt.Color(255, 255, 255));
+        jlbTrangchu.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jlbTrangchu.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\imac_50px.png")); // NOI18N
+        jlbTrangchu.setText(" Main Screen");
+        jlbTrangchu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlbTrangchuMouseClicked(evt);
+            }
+        });
+        jpnTrangchu.add(jlbTrangchu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
+
+        jPanel_Menu.add(jpnTrangchu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 330, 80));
+
+        jpnHocvien.setBackground(new java.awt.Color(38, 40, 55));
+        jpnHocvien.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnHocvienMouseClicked(evt);
+            }
+        });
+        jpnHocvien.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel7.setOpaque(true);
+        jpnHocvien.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+
+        jlbHocvien.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jlbHocvien.setForeground(new java.awt.Color(255, 255, 255));
+        jlbHocvien.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\user_location_50px.png")); // NOI18N
+        jlbHocvien.setText(" Management trainees ");
+        jlbHocvien.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlbHocvienMouseClicked(evt);
+            }
+        });
+        jpnHocvien.add(jlbHocvien, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
+
+        jPanel_Menu.add(jpnHocvien, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 330, 80));
+
+        jpnLophoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnLophoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel9.setOpaque(true);
+        jpnLophoc.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+
+        jlbLophoc.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jlbLophoc.setForeground(new java.awt.Color(255, 255, 255));
+        jlbLophoc.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\course_50px.png")); // NOI18N
+        jlbLophoc.setText(" Class management");
+        jlbLophoc.setToolTipText("");
+        jpnLophoc.add(jlbLophoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
+
+        jPanel_Menu.add(jpnLophoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 330, 80));
+
+        jpnKhoahoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnKhoahoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel11.setOpaque(true);
+        jpnKhoahoc.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+
+        jlbKhoahoc.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jlbKhoahoc.setForeground(new java.awt.Color(255, 255, 255));
+        jlbKhoahoc.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\classroom_50px.png")); // NOI18N
+        jlbKhoahoc.setText(" Course management ");
+        jpnKhoahoc.add(jlbKhoahoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
+
+        jPanel_Menu.add(jpnKhoahoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 330, 80));
+
+        jLabel6.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel6.setOpaque(true);
+        jPanel_Menu.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+
+        jLabel14.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel14.setOpaque(true);
+        jPanel_Menu.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+
+        jPanel3.setBackground(new java.awt.Color(38, 40, 55));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel15.setOpaque(true);
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
+
+        jLabel16.setBackground(new java.awt.Color(38, 40, 55));
+        jLabel16.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\exit_50px.png")); // NOI18N
+        jLabel16.setText("Log Out");
+        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 300, 80));
+
+        jPanel_Menu.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 330, 80));
+        jPanel_Menu.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 82, 340, 10));
+
+        jPanel1.add(jPanel_Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 670));
+
+        jpnView.setBackground(new java.awt.Color(153, 153, 153));
+        jpnView.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jpnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 760, 670));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jlbTrangchuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbTrangchuMouseClicked
+
+    }//GEN-LAST:event_jlbTrangchuMouseClicked
+
+    private void jlbHocvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlbHocvienMouseClicked
+        HocVien o = new HocVien();
+        o.setVisible(true);
+        o.pack();
+        o.setLocationRelativeTo(null);
+        o.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jlbHocvienMouseClicked
+
+    private void jpnHocvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnHocvienMouseClicked
+
+    }//GEN-LAST:event_jpnHocvienMouseClicked
+
+    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel16MouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +271,32 @@ public class LopHoc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ipnBieudo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel_Menu;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel jlbBieudo;
+    private javax.swing.JLabel jlbHocvien;
+    private javax.swing.JLabel jlbKhoahoc;
+    private javax.swing.JLabel jlbLophoc;
+    private javax.swing.JLabel jlbTrangchu;
+    private javax.swing.JPanel jpnHocvien;
+    private javax.swing.JPanel jpnKhoahoc;
+    private javax.swing.JPanel jpnLophoc;
+    private javax.swing.JPanel jpnTrangchu;
+    private javax.swing.JPanel jpnView;
     // End of variables declaration//GEN-END:variables
 }
