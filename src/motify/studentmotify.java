@@ -33,7 +33,7 @@ public class studentmotify {
             PreparedStatement ps = con.prepareStatement(sql);
              ResultSet rs = ps.executeQuery();
              while (rs.next()) {
-                 student std = new student(rs.getInt("id_student"),
+                 student std = new student(rs.getString("id_student"),
                          rs.getString("name"),
                          rs.getString("phone"), 
                          rs.getString("address"), 
@@ -49,14 +49,15 @@ public class studentmotify {
     }
     public static void insert(student std) {
         Connection con = myConnection.getConnection();
-        String sql = "INSERT INTO `student`(`name`, `phone`, `address`, `birthday`, `gender`) VALUES (?,?,?,?,?);";
+        String sql = "INSERT INTO `student`(`id_student`,`name`, `phone`, `address`, `birthday`, `gender`) VALUES (?,?,?,?,?,?);";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setString(1, std.getName());
-            ps.setString(2, std.getPhone());
-            ps.setString(3, std.getAddress());
-            ps.setString(4, std.getBirthday());
-            ps.setString(5, std.getGender());
+            ps.setString(1, std.getId_student());
+            ps.setString(2, std.getName());
+            ps.setString(3, std.getPhone());
+            ps.setString(4, std.getAddress());
+            ps.setString(5, std.getBirthday());
+            ps.setString(6, std.getGender());
             ps.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(studentmotify.class.getName()).log(Level.SEVERE, null, ex);
@@ -64,7 +65,7 @@ public class studentmotify {
     }
     public static void update(student std) {
         Connection con = myConnection.getConnection();
-        String sql = "UPDATE `student` SET `name`=?,`phone`=?,`address`=?,`birthday`=?,`gender`=? WHERE id_student = ?";
+        String sql = "UPDATE `student` SET `id_student` =?, `name`=?,`phone`=?,`address`=?,`birthday`=?,`gender`=? WHERE id_student = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
            
@@ -74,19 +75,19 @@ public class studentmotify {
             ps.setString(3, std.getPhone());
             ps.setString(4, std.getGender());
             ps.setString(5, std.getBirthday());
-            ps.setInt(6, std.getId_student());
+            ps.setString(6, std.getId_student());
             ps.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(studentmotify.class.getName()).log(Level.SEVERE, null, ex);
         } 
               
     }
-    public static void delete(int id_student) {
+    public static void delete(String id_student) {
         Connection con = myConnection.getConnection();
         String sql = "DELETE FROM `student` WHERE id_student = ?";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, id_student);
+            ps.setString(1, id_student);
             ps.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(studentmotify.class.getName()).log(Level.SEVERE, null, ex);
@@ -104,7 +105,7 @@ public class studentmotify {
             // lay du lieu tra ve
              ResultSet rs = ps.executeQuery();
              while (rs.next()) {
-                 student std = new student(rs.getInt("id_student"),
+                 student std = new student(rs.getString("id_student"),
                          rs.getString("name"),
                          rs.getString("phone"), 
                          rs.getString("address"), 

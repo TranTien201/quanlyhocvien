@@ -13,7 +13,7 @@ package model;
 public class student {
 
    
-    int id_student;
+    String id_student;
     String name;
     String phone;
     String address;
@@ -21,7 +21,7 @@ public class student {
     String gender;
    // lophoc LopHoc;
 
-    public student(int id_student, String name, String phone, String address, String birthday, String gender) {
+    public student(String id_student, String name, String phone, String address, String birthday, String gender) {
         this.id_student = id_student;
         this.name = name;
         this.phone = phone;
@@ -31,24 +31,18 @@ public class student {
   
     }
     
-    public student(String name, String phone, String address, String birthday, String gender) {
-        this.name = name;
-        this.phone = phone;
-        this.address = address;
-        this.birthday = birthday;
-        this.gender = gender;
-    }
+ 
     public student() {
         
     }
 
   
 
-    public int getId_student() {
+    public String getId_student() {
         return id_student;
     }
 
-    public void setId_student(int id_student) {
+    public void setId_student(String id_student) {
         this.id_student = id_student;
     }
 

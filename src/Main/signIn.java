@@ -6,7 +6,6 @@
 package Main;
 
 
-import Main.main;
 import javax.swing.JFrame;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -307,7 +306,7 @@ public class signIn extends javax.swing.JFrame {
             rs = ps.executeQuery();
 
             if(rs.next()) {
-                main mn = new main();
+                MainFr mn = new MainFr();
                 mn.setVisible(true);
                 mn.pack();
                 mn.setLocationRelativeTo(null);

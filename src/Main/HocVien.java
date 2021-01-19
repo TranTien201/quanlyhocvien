@@ -44,7 +44,7 @@ public class HocVien extends javax.swing.JFrame {
         
         for (student s :studentList) {
             tableModel.addRow(new Object[] {
-                tableModel.getRowCount() + 1, s.getName(), s.getPhone(), s.getAddress(), s.getBirthday(), s.getGender()
+                s.getId_student(), s.getName(), s.getPhone(), s.getAddress(), s.getBirthday(), s.getGender()
             });
         }
     }
@@ -88,10 +88,9 @@ public class HocVien extends javax.swing.JFrame {
         tblStudent = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
         txt_phone = new javax.swing.JTextField();
-        jlb_ten = new javax.swing.JLabel();
         jlb_diachi = new javax.swing.JLabel();
         jlb_bdate = new javax.swing.JLabel();
-        txt_ten = new javax.swing.JTextField();
+        txt_idhs = new javax.swing.JTextField();
         txt_diachi = new javax.swing.JTextField();
         jDateChooser_BD = new com.toedter.calendar.JDateChooser();
         jLabel8 = new javax.swing.JLabel();
@@ -101,6 +100,9 @@ public class HocVien extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         txt_gender1 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
+        jlb_ten1 = new javax.swing.JLabel();
+        jlb_id = new javax.swing.JLabel();
+        txt_ten1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -277,7 +279,7 @@ public class HocVien extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Phone");
-        jpnView.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+        jpnView.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
         txt_phone.setBackground(new java.awt.Color(153, 153, 153));
         txt_phone.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
@@ -288,33 +290,28 @@ public class HocVien extends javax.swing.JFrame {
                 txt_phoneActionPerformed(evt);
             }
         });
-        jpnView.add(txt_phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 450, 30));
-
-        jlb_ten.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jlb_ten.setForeground(new java.awt.Color(255, 255, 255));
-        jlb_ten.setText("FullName");
-        jpnView.add(jlb_ten, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jpnView.add(txt_phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 450, 30));
 
         jlb_diachi.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jlb_diachi.setForeground(new java.awt.Color(255, 255, 255));
         jlb_diachi.setText("Address");
-        jpnView.add(jlb_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        jpnView.add(jlb_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         jlb_bdate.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jlb_bdate.setForeground(new java.awt.Color(255, 255, 255));
         jlb_bdate.setText("BirthDay");
-        jpnView.add(jlb_bdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        jpnView.add(jlb_bdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
-        txt_ten.setBackground(new java.awt.Color(153, 153, 153));
-        txt_ten.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        txt_ten.setForeground(new java.awt.Color(255, 255, 255));
-        txt_ten.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        txt_ten.addActionListener(new java.awt.event.ActionListener() {
+        txt_idhs.setBackground(new java.awt.Color(153, 153, 153));
+        txt_idhs.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        txt_idhs.setForeground(new java.awt.Color(255, 255, 255));
+        txt_idhs.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txt_idhs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_tenActionPerformed(evt);
+                txt_idhsActionPerformed(evt);
             }
         });
-        jpnView.add(txt_ten, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 15, 450, 30));
+        jpnView.add(txt_idhs, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 450, 30));
 
         txt_diachi.setBackground(new java.awt.Color(153, 153, 153));
         txt_diachi.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
@@ -325,10 +322,10 @@ public class HocVien extends javax.swing.JFrame {
                 txt_diachiActionPerformed(evt);
             }
         });
-        jpnView.add(txt_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 450, 30));
+        jpnView.add(txt_diachi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 450, 30));
 
         jDateChooser_BD.setForeground(new java.awt.Color(153, 153, 153));
-        jpnView.add(jDateChooser_BD, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 450, 30));
+        jpnView.add(jDateChooser_BD, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 450, 30));
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -339,7 +336,7 @@ public class HocVien extends javax.swing.JFrame {
                 jLabel8MouseClicked(evt);
             }
         });
-        jpnView.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 100, 40));
+        jpnView.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 100, 40));
 
         jlb_add.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jlb_add.setForeground(new java.awt.Color(255, 255, 255));
@@ -350,7 +347,7 @@ public class HocVien extends javax.swing.JFrame {
                 jlb_addMouseClicked(evt);
             }
         });
-        jpnView.add(jlb_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 100, 40));
+        jpnView.add(jlb_add, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 100, 40));
 
         jLabel18.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
@@ -361,7 +358,7 @@ public class HocVien extends javax.swing.JFrame {
                 jLabel18MouseClicked(evt);
             }
         });
-        jpnView.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 120, 40));
+        jpnView.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 120, 40));
 
         jlb_update.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jlb_update.setForeground(new java.awt.Color(255, 255, 255));
@@ -372,12 +369,12 @@ public class HocVien extends javax.swing.JFrame {
                 jlb_updateMouseClicked(evt);
             }
         });
-        jpnView.add(jlb_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 120, 40));
+        jpnView.add(jlb_update, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 120, 40));
 
         jLabel12.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Gender");
-        jpnView.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
+        jpnView.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         txt_gender1.setBackground(new java.awt.Color(153, 153, 153));
         txt_gender1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
@@ -388,7 +385,7 @@ public class HocVien extends javax.swing.JFrame {
                 txt_gender1ActionPerformed(evt);
             }
         });
-        jpnView.add(txt_gender1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 450, 30));
+        jpnView.add(txt_gender1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 450, 30));
 
         jLabel20.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
@@ -399,7 +396,28 @@ public class HocVien extends javax.swing.JFrame {
                 jLabel20MouseClicked(evt);
             }
         });
-        jpnView.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 120, 40));
+        jpnView.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 120, 40));
+
+        jlb_ten1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jlb_ten1.setForeground(new java.awt.Color(255, 255, 255));
+        jlb_ten1.setText("FullName");
+        jpnView.add(jlb_ten1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+
+        jlb_id.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jlb_id.setForeground(new java.awt.Color(255, 255, 255));
+        jlb_id.setText("Student_ID");
+        jpnView.add(jlb_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        txt_ten1.setBackground(new java.awt.Color(153, 153, 153));
+        txt_ten1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        txt_ten1.setForeground(new java.awt.Color(255, 255, 255));
+        txt_ten1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        txt_ten1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_ten1ActionPerformed(evt);
+            }
+        });
+        jpnView.add(txt_ten1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 450, 30));
 
         jPanel1.add(jpnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 760, 670));
 
@@ -429,9 +447,9 @@ public class HocVien extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_phoneActionPerformed
 
-    private void txt_tenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_tenActionPerformed
+    private void txt_idhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_idhsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_tenActionPerformed
+    }//GEN-LAST:event_txt_idhsActionPerformed
 
     private void txt_diachiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_diachiActionPerformed
         // TODO add your handling code here:
@@ -444,14 +462,15 @@ public class HocVien extends javax.swing.JFrame {
     }//GEN-LAST:event_jlb_updateMouseClicked
 
     private void jlb_addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlb_addMouseClicked
-        String name = txt_ten.getText();
+        String id_student = txt_idhs.getText();
+        String name = txt_ten1.getText();
         String address = txt_diachi.getText();
         String phone = txt_phone.getText();
         String gender = txt_gender1.getText();
         String birthday;
         SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
         birthday = dateformat.format(jDateChooser_BD.getDate());
-        student std = new student(name, phone, address, birthday, gender);
+        student std = new student(id_student, name, phone, address, birthday, gender);
         studentmotify.insert(std);
         showStudent();
         
@@ -482,14 +501,15 @@ public class HocVien extends javax.swing.JFrame {
             
               for (student s :studentList) {
             tableModel.addRow(new Object[] {
-                tableModel.getRowCount() + 1, s.getName(), s.getPhone(), s.getAddress(), s.getBirthday(), s.getGender()
+                tableModel.getRowCount() + 1,s.getId_student(), s.getName(), s.getPhone(), s.getAddress(), s.getBirthday(), s.getGender()
             });
         }
         }
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-       txt_ten.setText("");
+       txt_ten1.setText("");
+       txt_idhs.setText("");
        txt_phone.setText("");
        txt_diachi.setText("");
        txt_gender1.setText("");
@@ -502,7 +522,7 @@ public class HocVien extends javax.swing.JFrame {
             String name = (String) tblStudent.getValueAt(selectedRow, 1);
             for (student s : studentList) {
                 if(name.equals(s.getName())) {
-                    txt_ten.setText(name);
+                    txt_ten1.setText(name);
                     txt_diachi.setText(s.getAddress());
                     txt_phone.setText(s.getPhone());
                     txt_gender1.setText(s.getGender());
@@ -518,6 +538,10 @@ public class HocVien extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_tblStudentMouseClicked
+
+    private void txt_ten1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ten1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_ten1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -588,7 +612,8 @@ public class HocVien extends javax.swing.JFrame {
     private javax.swing.JLabel jlb_add;
     private javax.swing.JLabel jlb_bdate;
     private javax.swing.JLabel jlb_diachi;
-    private javax.swing.JLabel jlb_ten;
+    private javax.swing.JLabel jlb_id;
+    private javax.swing.JLabel jlb_ten1;
     private javax.swing.JLabel jlb_update;
     private javax.swing.JPanel jpnHocvien;
     private javax.swing.JPanel jpnKhoahoc;
@@ -598,7 +623,8 @@ public class HocVien extends javax.swing.JFrame {
     private javax.swing.JTable tblStudent;
     private javax.swing.JTextField txt_diachi;
     private javax.swing.JTextField txt_gender1;
+    private javax.swing.JTextField txt_idhs;
     private javax.swing.JTextField txt_phone;
-    private javax.swing.JTextField txt_ten;
+    private javax.swing.JTextField txt_ten1;
     // End of variables declaration//GEN-END:variables
 }

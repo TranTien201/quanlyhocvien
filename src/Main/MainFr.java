@@ -11,12 +11,12 @@ import javax.swing.JFrame;
  *
  * @author TranTien
  */
-public class main extends javax.swing.JFrame {
+public class MainFr extends javax.swing.JFrame {
 
     /**
-     * Creates new form main
+     * Creates new form MainFr
      */
-    public main() {
+    public MainFr() {
         initComponents();
     }
 
@@ -83,6 +83,11 @@ public class main extends javax.swing.JFrame {
         jPanel_Menu.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 80));
 
         ipnBieudo.setBackground(new java.awt.Color(38, 40, 55));
+        ipnBieudo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ipnBieudoMouseClicked(evt);
+            }
+        });
         ipnBieudo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setBackground(new java.awt.Color(0, 153, 0));
@@ -101,7 +106,7 @@ public class main extends javax.swing.JFrame {
         jpnTrangchu.setForeground(new java.awt.Color(255, 255, 255));
         jpnTrangchu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel5.setBackground(new java.awt.Color(255, 51, 51));
         jLabel5.setOpaque(true);
         jpnTrangchu.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
 
@@ -145,6 +150,11 @@ public class main extends javax.swing.JFrame {
         jPanel_Menu.add(jpnHocvien, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 330, 80));
 
         jpnLophoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnLophoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnLophocMouseClicked(evt);
+            }
+        });
         jpnLophoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setBackground(new java.awt.Color(0, 153, 0));
@@ -161,6 +171,11 @@ public class main extends javax.swing.JFrame {
         jPanel_Menu.add(jpnLophoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 330, 80));
 
         jpnKhoahoc.setBackground(new java.awt.Color(38, 40, 55));
+        jpnKhoahoc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpnKhoahocMouseClicked(evt);
+            }
+        });
         jpnKhoahoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setBackground(new java.awt.Color(0, 153, 0));
@@ -205,13 +220,13 @@ public class main extends javax.swing.JFrame {
         jPanel_Menu.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 330, 80));
         jPanel_Menu.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 82, 340, 10));
 
-        jPanel1.add(jPanel_Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 630));
+        jPanel1.add(jPanel_Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 670));
 
         jpnView.setBackground(new java.awt.Color(153, 153, 153));
         jpnView.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jpnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 610, 630));
+        jPanel1.add(jpnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 760, 670));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 630));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -237,6 +252,33 @@ public class main extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jLabel16MouseClicked
 
+    private void jpnLophocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnLophocMouseClicked
+        LopHoc lp = new LopHoc();
+        lp.setVisible(true);
+        lp.pack();
+        lp.setLocationRelativeTo(null);
+        lp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnLophocMouseClicked
+
+    private void jpnKhoahocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpnKhoahocMouseClicked
+        KhoaHoc kh = new KhoaHoc();
+        kh.setVisible(true);
+        kh.pack();
+        kh.setLocationRelativeTo(null);
+        kh.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_jpnKhoahocMouseClicked
+
+    private void ipnBieudoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ipnBieudoMouseClicked
+        ThongKe tk = new ThongKe();
+        tk.setVisible(true);
+        tk.pack();
+        tk.setLocationRelativeTo(null);
+        tk.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_ipnBieudoMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -254,20 +296,20 @@ public class main extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFr.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new main().setVisible(true);
+                new MainFr().setVisible(true);
             }
         });
     }

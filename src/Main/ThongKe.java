@@ -11,12 +11,12 @@ import javax.swing.JFrame;
  *
  * @author TranTien
  */
-public class LopHoc extends javax.swing.JFrame {
+public class ThongKe extends javax.swing.JFrame {
 
     /**
-     * Creates new form LopHoc
+     * Creates new form ThongKe
      */
-    public LopHoc() {
+    public ThongKe() {
         initComponents();
     }
 
@@ -35,8 +35,8 @@ public class LopHoc extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         ipnBieudo = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jlbBieudo = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jpnTrangchu = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jlbTrangchu = new javax.swing.JLabel();
@@ -44,8 +44,8 @@ public class LopHoc extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jlbHocvien = new javax.swing.JLabel();
         jpnLophoc = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
         jlbLophoc = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jpnKhoahoc = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jlbKhoahoc = new javax.swing.JLabel();
@@ -85,15 +85,15 @@ public class LopHoc extends javax.swing.JFrame {
         ipnBieudo.setBackground(new java.awt.Color(38, 40, 55));
         ipnBieudo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setBackground(new java.awt.Color(0, 153, 0));
-        jLabel3.setOpaque(true);
-        ipnBieudo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
-
         jlbBieudo.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jlbBieudo.setForeground(new java.awt.Color(255, 255, 255));
         jlbBieudo.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\statistics_50px.png")); // NOI18N
         jlbBieudo.setText(" Statistics");
         ipnBieudo.add(jlbBieudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
+
+        jLabel9.setBackground(new java.awt.Color(255, 51, 51));
+        jLabel9.setOpaque(true);
+        ipnBieudo.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
 
         jPanel_Menu.add(ipnBieudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 330, 80));
 
@@ -147,16 +147,16 @@ public class LopHoc extends javax.swing.JFrame {
         jpnLophoc.setBackground(new java.awt.Color(38, 40, 55));
         jpnLophoc.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel9.setBackground(new java.awt.Color(255, 51, 51));
-        jLabel9.setOpaque(true);
-        jpnLophoc.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
-
         jlbLophoc.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jlbLophoc.setForeground(new java.awt.Color(255, 255, 255));
         jlbLophoc.setIcon(new javax.swing.ImageIcon("C:\\Users\\TranTien\\Desktop\\course_50px.png")); // NOI18N
         jlbLophoc.setText(" Class management");
         jlbLophoc.setToolTipText("");
         jpnLophoc.add(jlbLophoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 310, 80));
+
+        jLabel3.setBackground(new java.awt.Color(0, 153, 0));
+        jLabel3.setOpaque(true);
+        jpnLophoc.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 80));
 
         jPanel_Menu.add(jpnLophoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 330, 80));
 
@@ -254,20 +254,20 @@ public class LopHoc extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LopHoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ThongKe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LopHoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ThongKe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LopHoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ThongKe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LopHoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ThongKe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LopHoc().setVisible(true);
+                new ThongKe().setVisible(true);
             }
         });
     }
